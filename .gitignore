@@ -1,6 +1,0 @@
-.gitignore
-CMakeLists.txt.bak
-build
-extern
-.cache
-tests
