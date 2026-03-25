@@ -9,12 +9,21 @@ namespace Key {
   static constexpr KeyDef KEY_DEF_GUI = KeyDef(KEY_LEFT_GUI, "GUI");
   static constexpr KeyDef KEY_DEF_LGUI = KeyDef(KEY_LEFT_GUI, "LGUI");;
   static constexpr KeyDef KEY_DEF_RGUI = KeyDef(KEY_RIGHT_GUI, "RGUI");
+  static constexpr KeyDef KEY_DEF_WINDOWS = KeyDef(KEY_LEFT_GUI, "WINDOWS");
+  static constexpr KeyDef KEY_DEF_LWINDOWS = KeyDef(KEY_LEFT_GUI, "LWINDOWS");;
+  static constexpr KeyDef KEY_DEF_RWINDOWS = KeyDef(KEY_RIGHT_GUI, "RWINDOWS");
+  static constexpr KeyDef KEY_DEF_COMMAND = KeyDef(KEY_LEFT_GUI, "COMMAND");
+  static constexpr KeyDef KEY_DEF_LCOMMAND = KeyDef(KEY_LEFT_GUI, "LCOMMAND");;
+  static constexpr KeyDef KEY_DEF_RCOMMAND = KeyDef(KEY_RIGHT_GUI, "RCOMMAND");
   static constexpr KeyDef KEY_DEF_SHIFT = KeyDef(KEY_LEFT_SHIFT, "SHIFT");
   static constexpr KeyDef KEY_DEF_LSHIFT = KeyDef(KEY_LEFT_SHIFT, "LSHIFT");
   static constexpr KeyDef KEY_DEF_RSHIFT = KeyDef(KEY_RIGHT_SHIFT, "RSHIFT");
   static constexpr KeyDef KEY_DEF_CTRL = KeyDef(KEY_LEFT_CTRL, "CTRL");
   static constexpr KeyDef KEY_DEF_LCTRL = KeyDef(KEY_LEFT_CTRL, "LCTRL");
   static constexpr KeyDef KEY_DEF_RCTRL = KeyDef(KEY_RIGHT_CTRL, "RCTRL");
+  static constexpr KeyDef KEY_DEF_CONTROL = KeyDef(KEY_LEFT_CTRL, "CONTROL");
+  static constexpr KeyDef KEY_DEF_LCONTROL = KeyDef(KEY_LEFT_CTRL, "LCONTROL");
+  static constexpr KeyDef KEY_DEF_RCONTROL = KeyDef(KEY_RIGHT_CTRL, "RCONTROL");
   static constexpr KeyDef KEY_DEF_ALT = KeyDef(KEY_LEFT_ALT, "ALT");
   static constexpr KeyDef KEY_DEF_LALT = KeyDef(KEY_LEFT_ALT, "LALT");
   static constexpr KeyDef KEY_DEF_RALT = KeyDef(KEY_RIGHT_ALT, "RALT");
@@ -31,10 +40,8 @@ namespace Key {
   static constexpr KeyDef KEY_DEF_BACKSPACE = KeyDef(KEY_BACKSPACE, "BACKSPACE");
   static constexpr KeyDef KEY_DEF_TAB = KeyDef(KEY_TAB, "TAB");
   static constexpr KeyDef KEY_DEF_ENTER = KeyDef(KEY_RETURN, "ENTER");
-  static constexpr KeyDef KEY_DEF_RETURN = KeyDef(KEY_RETURN, "RETURN"); //Extra
   static constexpr KeyDef KEY_DEF_MENU = KeyDef(KEY_MENU, "MENU");
   static constexpr KeyDef KEY_DEF_APP = KeyDef(KEY_MENU, "APP"); // Extra
-
   static constexpr KeyDef KEY_DEF_ESC = KeyDef(KEY_ESC, "ESC");
   static constexpr KeyDef KEY_DEF_INSERT = KeyDef(KEY_INSERT, "INSERT");
   static constexpr KeyDef KEY_DEF_DELETE = KeyDef(KEY_DELETE, "DELETE");
@@ -46,6 +53,7 @@ namespace Key {
   static constexpr KeyDef KEY_DEF_PRINT_SCREEN = KeyDef(KEY_PRINT_SCREEN, "PRINT");
   static constexpr KeyDef KEY_DEF_SCROLL_LOCK = KeyDef(KEY_SCROLL_LOCK, "SCROLLLOCK");
   static constexpr KeyDef KEY_DEF_PAUSE = KeyDef(KEY_PAUSE, "PAUSE");
+  static constexpr KeyDef KEY_DEF_BREAK = KeyDef(KEY_PAUSE, "BREAK");
 
   // Numeric keypad
   static constexpr KeyDef KEY_DEF_NUM_LOCK = KeyDef(KEY_NUM_LOCK, "NUMLOCK");

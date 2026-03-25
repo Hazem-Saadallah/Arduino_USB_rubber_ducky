@@ -6,5 +6,6 @@ namespace Command {
   static constexpr char* CMD_DELAY_STR = "DELAY";;
 
   [[nodiscard]] bool String(char params[]);
+  [[nodiscard]] bool Stringln(char params[]);
   [[nodiscard]] bool Delay(char params[]);
 };

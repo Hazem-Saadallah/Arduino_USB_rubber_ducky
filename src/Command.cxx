@@ -6,6 +6,10 @@ bool Command::String(char params[]) {
   return static_cast<bool>(Keyboard.print(params));
 }
 
+bool Command::Stringln(char params[]) {
+  return static_cast<bool>(Keyboard.println(params));
+}
+
 bool Command::Delay(char params[]) {
   char* endptr;
   long value = strtol(params, &endptr, 10);

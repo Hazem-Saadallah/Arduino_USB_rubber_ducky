@@ -10,6 +10,7 @@ Interpreter::Interpreter() { Keyboard.begin(KeyboardLayout_en_US); }
 Interpreter::~Interpreter() { Keyboard.end(); }
 
 void Interpreter::command_error() {
+  Keyboard.releaseAll();
   while (1) {
     Serial.println("ERROR");
     delay(1000);
@@ -56,20 +57,30 @@ void Interpreter::press(char key[]) {
 
   uint32_t hash = KeyDef::hash_string_runtime(key);
   switch (hash) {
+    // Modifiers
 		case Key::KEY_DEF_GUI.get_hash(): Keyboard.press(Key::KEY_DEF_GUI.get_id()); break;
 		case Key::KEY_DEF_LGUI.get_hash(): Keyboard.press(Key::KEY_DEF_LGUI.get_id()); break;
 		case Key::KEY_DEF_RGUI.get_hash(): Keyboard.press(Key::KEY_DEF_RGUI.get_id()); break;
+		case Key::KEY_DEF_WINDOWS.get_hash(): Keyboard.press(Key::KEY_DEF_WINDOWS.get_id()); break;
+		case Key::KEY_DEF_LWINDOWS.get_hash(): Keyboard.press(Key::KEY_DEF_LWINDOWS.get_id()); break;
+		case Key::KEY_DEF_RWINDOWS.get_hash(): Keyboard.press(Key::KEY_DEF_RWINDOWS.get_id()); break;
+		case Key::KEY_DEF_COMMAND.get_hash(): Keyboard.press(Key::KEY_DEF_COMMAND.get_id()); break;
+		case Key::KEY_DEF_LCOMMAND.get_hash(): Keyboard.press(Key::KEY_DEF_LCOMMAND.get_id()); break;
+		case Key::KEY_DEF_RCOMMAND.get_hash(): Keyboard.press(Key::KEY_DEF_RCOMMAND.get_id()); break;
 		case Key::KEY_DEF_SHIFT.get_hash(): Keyboard.press(Key::KEY_DEF_SHIFT.get_id()); break;
 		case Key::KEY_DEF_LSHIFT.get_hash(): Keyboard.press(Key::KEY_DEF_LSHIFT.get_id()); break;
 		case Key::KEY_DEF_RSHIFT.get_hash(): Keyboard.press(Key::KEY_DEF_RSHIFT.get_id()); break;
 		case Key::KEY_DEF_CTRL.get_hash(): Keyboard.press(Key::KEY_DEF_CTRL.get_id()); break;
 		case Key::KEY_DEF_LCTRL.get_hash(): Keyboard.press(Key::KEY_DEF_LCTRL.get_id()); break;
 		case Key::KEY_DEF_RCTRL.get_hash(): Keyboard.press(Key::KEY_DEF_RCTRL.get_id()); break;
+		case Key::KEY_DEF_CONTROL.get_hash(): Keyboard.press(Key::KEY_DEF_CONTROL.get_id()); break;
+		case Key::KEY_DEF_LCONTROL.get_hash(): Keyboard.press(Key::KEY_DEF_LCONTROL.get_id()); break;
+		case Key::KEY_DEF_RCONTROL.get_hash(): Keyboard.press(Key::KEY_DEF_RCONTROL.get_id()); break;
 		case Key::KEY_DEF_ALT.get_hash(): Keyboard.press(Key::KEY_DEF_ALT.get_id()); break;
 		case Key::KEY_DEF_LALT.get_hash(): Keyboard.press(Key::KEY_DEF_LALT.get_id()); break;
 		case Key::KEY_DEF_RALT.get_hash(): Keyboard.press(Key::KEY_DEF_RALT.get_id()); break;
 
-// Misc keys
+    // Misc keys
 		case Key::KEY_DEF_ARROW_UP.get_hash(): Keyboard.press(Key::KEY_DEF_ARROW_UP.get_id()); break;
 		case Key::KEY_DEF_UP.get_hash(): Keyboard.press(Key::KEY_DEF_UP.get_id()); break;
 		case Key::KEY_DEF_ARROW_DOWN.get_hash(): Keyboard.press(Key::KEY_DEF_ARROW_DOWN.get_id()); break;
@@ -81,7 +92,6 @@ void Interpreter::press(char key[]) {
 		case Key::KEY_DEF_BACKSPACE.get_hash(): Keyboard.press(Key::KEY_DEF_BACKSPACE.get_id()); break;
 		case Key::KEY_DEF_TAB.get_hash(): Keyboard.press(Key::KEY_DEF_TAB.get_id()); break;
 		case Key::KEY_DEF_ENTER.get_hash(): Keyboard.press(Key::KEY_DEF_ENTER.get_id()); break;
-		case Key::KEY_DEF_RETURN.get_hash(): Keyboard.press(Key::KEY_DEF_RETURN.get_id()); break;
 		case Key::KEY_DEF_MENU.get_hash(): Keyboard.press(Key::KEY_DEF_MENU.get_id()); break;
 		case Key::KEY_DEF_APP.get_hash(): Keyboard.press(Key::KEY_DEF_APP.get_id()); break;
 
@@ -96,6 +106,8 @@ void Interpreter::press(char key[]) {
 		case Key::KEY_DEF_PRINT_SCREEN.get_hash(): Keyboard.press(Key::KEY_DEF_PRINT_SCREEN.get_id()); break;
 		case Key::KEY_DEF_SCROLL_LOCK.get_hash(): Keyboard.press(Key::KEY_DEF_SCROLL_LOCK.get_id()); break;
 		case Key::KEY_DEF_PAUSE.get_hash(): Keyboard.press(Key::KEY_DEF_PAUSE.get_id()); break;
+		case Key::KEY_DEF_BREAK.get_hash(): Keyboard.press(Key::KEY_DEF_BREAK.get_id()); break;
+  
 
 // Numeric keypad
 		case Key::KEY_DEF_NUM_LOCK.get_hash(): Keyboard.press(Key::KEY_DEF_NUM_LOCK.get_id()); break;
