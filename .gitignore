@@ -1,0 +1,6 @@
+.gitigonre
+CMakeLists.txt.bak
+build
+extern
+.cache
+tests
